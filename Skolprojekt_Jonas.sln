@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExempel", "ConsoleExempel\ConsoleExempel.csproj", "{79385504-F2A8-4CA8-9E59-1167EA59D076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MittWinForms", "MittWinForms\MittWinForms.csproj", "{1B197917-8F1F-4D3D-BAD3-E5EC1B54C77E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79385504-F2A8-4CA8-9E59-1167EA59D076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79385504-F2A8-4CA8-9E59-1167EA59D076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79385504-F2A8-4CA8-9E59-1167EA59D076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79385504-F2A8-4CA8-9E59-1167EA59D076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B197917-8F1F-4D3D-BAD3-E5EC1B54C77E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B197917-8F1F-4D3D-BAD3-E5EC1B54C77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B197917-8F1F-4D3D-BAD3-E5EC1B54C77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B197917-8F1F-4D3D-BAD3-E5EC1B54C77E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {578FAEE3-A4DC-4203-8D70-5112CC2CF246}
+	EndGlobalSection
+EndGlobal
