@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MittWinForms.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,25 @@ namespace MittWinForms
 {
     public partial class CatchStars : Form
     {
+        List<PictureBox> bombs = new List<PictureBox>();
         int Seconds = 60000;
         int Points = 0;
+        Random random = new Random();
 
         public CatchStars()
         {
+            for(int i = 0; i < 5; i++)
+            {
+                PictureBox pb = new PictureBox();
+                pb.BackgroundImage = Resources.bomb;
+                pb.Size = new Size(80, 80);
+                pb.BackgroundImageLayout = ImageLayout.Stretch;
+                pb.Location = new Point( random.Next(1, 800),10);
+                this.Controls.Add(pb);
+                bombs.Add(pb);
+            }
             InitializeComponent();
-            RedrawStar();
+            RedrawBomb();
         }
 
         private void CatchStars_KeyDown(object sender, KeyEventArgs e)
@@ -44,20 +57,7 @@ namespace MittWinForms
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            Star.Top += 25;
-            
-            //Om skärnan passerat botten.... rita om 
-            if(Star.Top > 600)
-            {
-                RedrawStar();
-            }
-
-            if (Star.Bounds.IntersectsWith(Player.Bounds))
-            {
-                Points += 1;
-                RedrawStar();
-            }
-
+            RedrawBomb();
             //Minskar timer
             Seconds -= timer1.Interval;
             if (Seconds <= 0)
@@ -69,11 +69,23 @@ namespace MittWinForms
             lblPoints.Text = $"Poäng: {Points}";
         }
 
-        private void RedrawStar()
+        private void RedrawBomb()
         {
-            Random r = new Random();
-            Star.Left = r.Next(10, 880);
-            Star.Top = r.Next(10, 250);
+            foreach(PictureBox pb in bombs)
+            {
+                int speed = random.Next(1, 30);
+                pb.Top += speed;
+                if (pb.Top > 600)
+                {
+                    pb.Top = 20;
+                }
+                if (pb.Bounds.IntersectsWith(Player.Bounds))
+                {
+                    Points++;
+                    pb.Top = 0;
+                }
+            }
+
         }
     }
 }

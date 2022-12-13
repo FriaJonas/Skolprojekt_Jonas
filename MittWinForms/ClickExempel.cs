@@ -42,8 +42,9 @@ namespace MittWinForms
 
         private void Bomb_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Du träffade");
+            click++;
             timer1.Interval -= 10;
+            label1.Text = "Poäng" + click;
         }
 
         public void MoveBomb()

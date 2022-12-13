@@ -34,9 +34,7 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblPoints = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Star = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Star)).BeginInit();
             this.SuspendLayout();
             // 
             // Player
@@ -79,17 +77,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // Star
-            // 
-            this.Star.BackColor = System.Drawing.Color.Transparent;
-            this.Star.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Star.BackgroundImage")));
-            this.Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Star.Location = new System.Drawing.Point(226, 93);
-            this.Star.Name = "Star";
-            this.Star.Size = new System.Drawing.Size(33, 31);
-            this.Star.TabIndex = 3;
-            this.Star.TabStop = false;
-            // 
             // CatchStars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -97,7 +84,6 @@
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 553);
-            this.Controls.Add(this.Star);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.Player);
@@ -105,7 +91,6 @@
             this.Text = "CatchStars";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CatchStars_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Star)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +102,5 @@
         private Label lblTimer;
         private Label lblPoints;
         private System.Windows.Forms.Timer timer1;
-        private PictureBox Star;
     }
 }
