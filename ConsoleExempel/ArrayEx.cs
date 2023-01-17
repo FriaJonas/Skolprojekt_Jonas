@@ -8,43 +8,30 @@ namespace ConsoleExempel
 {
     internal class ArrayEx
     {
+        public ArrayEx() {
+            Start();
+        }
         public static void Start()
         {
-            string name = "Kalle";
+            string[] namn = new string[] { "Kalle", "Pelle", "Stina" };
+
+            Console.WriteLine(namn[2]);
 
 
-            string name2 = "Stina";
-            string name3 = "Jocke";
-
-            string[] names = new string[10];
-            names[0] = "Kalle";
-            names[1] = "Putte";
-
-            string[] Cities = new string[] { "Stockholm", "Malmö" };
-
-            int[] massatal = new int[] { 1, 2, 3, 4, 5, 6 };
-
-
-            int tal = 100;
-
-            Random rnd = new Random();
-
-            int[] slumptal = new int[7];
-
-            slumptal[0] = rnd.Next(1, 33);
-
-            slumptal[1] = rnd.Next(1, 33);
-
-            slumptal[6] = rnd.Next(1, 33);
-
-                
+            int[] massatal = new int[] {1,2,3,4,5};
+            Console.WriteLine(massatal[3]);
 
 
 
+            int[] ints= new int[4];
 
+            ints[0] = 10;
+            ints[1] = 20;
+            ints[2] = 30;
+            ints[3] = 40;   
 
-
+            int ettNyttTal = ints[1];
         }
-        
+
     }
 }
