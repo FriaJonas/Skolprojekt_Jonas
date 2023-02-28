@@ -25,7 +25,7 @@ namespace ConsoleExempel
             //Tips - använd for-loopen baklänges!
             for(int i=text.Length-1;i>=0; i--)
             {
-                Console.WriteLine(text[i]);
+                Console.Write(text[i]);
             }
         }
         public static void Vertical(string text)
