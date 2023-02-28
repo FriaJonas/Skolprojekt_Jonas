@@ -4,13 +4,43 @@ namespace ConsoleExempel
 {
     internal class Program
     {
-        
-
-
         static void Main(string[] args)
         {
             //ArrayEx.Start();
-            CountDown();
+            //DivisionByZero();
+            CharTest.ViTestar();
+        }
+
+        private static void CharTestLocal()
+        {
+            char letter = 'r';
+            string ord= "FriaLäroverken";
+            char[] chars= ord.ToCharArray();
+            
+            for(int i=0;i<chars.Length;i++)
+            {
+                if (chars[i] == letter)
+                {
+                    
+                }
+            }
+
+        }
+        public static void DivisionByZero()
+        {
+            int tal = 0;
+            int talA = 10;
+            int talB = 0;
+
+            try
+            {
+                tal = talA / talB;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Det sket sig "+ex.Message);
+            }
+            Console.WriteLine("Svar: " + tal);
         }
 
         public static void CountDown()

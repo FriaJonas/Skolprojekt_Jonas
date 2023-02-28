@@ -6,8 +6,45 @@ using System.Threading.Tasks;
 
 namespace ConsoleExempel
 {
-    internal class CharTest
+    public  class CharTest
     {
+
+        public static void ViTestar()
+        {
+            Console.WriteLine("Skriv in en text:");
+            string input = Console.ReadLine();
+            BackWord(input);
+            Vertical(input);
+            CountChar(input);
+        }
+
+        public static void BackWord(string text) 
+        { 
+            //Skapa en algoritm som vänder på texten och skriver*
+            //ut den baklänges.
+            //Tips - använd for-loopen baklänges!
+            for(int i=text.Length-1;i>=0; i--)
+            {
+                Console.WriteLine(text[i]);
+            }
+        }
+        public static void Vertical(string text)
+        {
+            //Skriv ut texten vertilkalt
+            //Precis enligt genomgången
+            //For-loop för varje tecken i strängen
+        }
+        public static void CountChar(string text)
+        {
+            //Räkna ut hur många gånger å, ä , ö finns
+            //Skriv ut antalet
+
+            //
+        }
+
+
+
+        Char tecken = 'J';
         public static void Start()
         {
             Console.WriteLine("Skriv ett ord");
@@ -38,6 +75,12 @@ namespace ConsoleExempel
                 }
             }
             Console.WriteLine(newWord);
+        }
+
+        public static void Test2()
+        {
+            string name = "JOnas";
+            bool find = name.Contains('O');
         }
         
     }
