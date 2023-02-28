@@ -33,13 +33,46 @@ namespace ConsoleExempel
             //Skriv ut texten vertilkalt
             //Precis enligt genomgången
             //For-loop för varje tecken i strängen
+            int lengh = text.Length;
+            for(int i=0;i<lengh;i++)
+            {
+                Console.WriteLine(text[i]);
+            }
         }
         public static void CountChar(string text)
         {
             //Räkna ut hur många gånger å, ä , ö finns
             //Skriv ut antalet
+            int charÅ = 0;
+            int charÄ = 0;
+            int charÖ = 0;
+            for(int i=0;i<text.Length;i++)
+            {
+                if (text[i] == 'å')
+                {
+                    charÅ++;
+                }
+                if (text[i] == 'ä')
+                {
+                    charÄ++;
+                }
+                if (text[i] == 'ö' | text[i]=='Ö')
+                {
+                    charÖ++;
+                }
+            }
+            Console.WriteLine($"antal å:{charÅ}, antal ä {charÄ}, antal Ö{charÖ}");
+        }
 
-            //
+        public static bool CheckIfExcist(char tecken, string text)
+        {
+            bool result = false;
+            //Kod för att kolla om tecknet finns:
+            if (text.Contains(tecken)){
+                result = true;
+            }
+
+            return result;
         }
 
 
