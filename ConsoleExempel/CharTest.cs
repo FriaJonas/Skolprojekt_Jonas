@@ -13,9 +13,36 @@ namespace ConsoleExempel
         {
             Console.WriteLine("Skriv in en text:");
             string input = Console.ReadLine();
-            BackWord(input);
-            Vertical(input);
-            CountChar(input);
+
+            bool svar = CheckChar('Ö', input);
+            if (svar)
+            {
+                Console.WriteLine("Bokstaven Ö fannse med!");
+            }
+            else
+            {
+                Console.WriteLine("Fanns ej med");
+            }
+            //FirstAndLast(input);
+            //BackWord(input);
+            //Vertical(input);
+            //CountChar(input);
+        }
+
+        public static bool CheckChar(char tecken, string text)
+        {
+            bool result = false;
+            if (text.Contains(tecken))
+            {
+                result = true;
+            }
+            return result;
+        }
+
+        public static void FirstAndLast(string text)
+        {
+            Console.WriteLine(text[0]);
+            Console.WriteLine(text[text.Length - 1]);
         }
 
         public static void BackWord(string text)

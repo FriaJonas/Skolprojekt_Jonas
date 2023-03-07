@@ -78,11 +78,13 @@ namespace MittWinForms
                 if (pb.Top > 600)
                 {
                     pb.Top = 20;
+                    pb.Left = random.Next(1, this.Width-100);
                 }
                 if (pb.Bounds.IntersectsWith(Player.Bounds))
                 {
-                    Points++;
+                    Points+=1000;
                     pb.Top = 0;
+                    pb.Left = random.Next(1, this.Width - 100);
                 }
             }
 
