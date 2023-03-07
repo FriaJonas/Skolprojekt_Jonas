@@ -18,8 +18,9 @@ namespace ConsoleExempel
             CountChar(input);
         }
 
-        public static void BackWord(string text) 
-        { 
+        public static void BackWord(string text)
+        {
+            
             //Skapa en algoritm som vänder på texten och skriver*
             //ut den baklänges.
             //Tips - använd for-loopen baklänges!

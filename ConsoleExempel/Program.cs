@@ -8,7 +8,8 @@ namespace ConsoleExempel
         {
             //ArrayEx.Start();
             //DivisionByZero();
-            CharTest.ViTestar();
+            //CharTest.ViTestar();
+            MultiTable.Start();
         }
 
         private static void CharTestLocal()
