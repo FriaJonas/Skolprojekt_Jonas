@@ -68,7 +68,14 @@ namespace MittWinForms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MoveUfo();
+           // MoveUfo();
+            //rotate();
         }
+        //private void rotate()
+        //{
+        //    Image img = pictureBox1.Image;
+        //    img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+        //    pictureBox1.Image = img;
+        //}
     }
 }

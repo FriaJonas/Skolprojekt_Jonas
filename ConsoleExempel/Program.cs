@@ -10,6 +10,7 @@ namespace ConsoleExempel
             //DivisionByZero();
             CharTest.ViTestar();
             //MultiTable.Start();
+            
         }
 
         private static void CharTestLocal()
